@@ -9,9 +9,8 @@ import com.fnaime.whatnext.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
     private ImageView imageView;
-    private int[] imageResources = {
+    private final int[] imageResources = {
             R.drawable.img_1, R.drawable.img_2, R.drawable.img_3,
             R.drawable.img_4, R.drawable.img_5, R.drawable.img_6
     };
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         // Set initial image
